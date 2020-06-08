@@ -1,2 +1,3 @@
 # Comp-266-Web-Programming
-Website Course Project Repository
+
+Comp 266 Course Website Project Repo
