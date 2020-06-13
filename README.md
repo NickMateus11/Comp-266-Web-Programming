@@ -2,6 +2,10 @@
 
 Comp 266 Course Website Project Repo
 
+
+TODO: product of the day
+
+
 For later:
 
     <script type="text/javascript" src="https://theysaidso.com/gadgets/v3/theysaidso.js"></script>
