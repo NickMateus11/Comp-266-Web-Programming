@@ -1,69 +1,61 @@
 
 <!-- 
 	Author: Nicholas Mateus
- 	Last Modified: 2020, June 1
+ 	Last Modified: 2020, June 20
 -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>The Run Stop Shop</title>
-    </head>
+  </head>
       
-    <body>
-      <h1><a href="homePage.html">The Run Stop Shop</a></h1>
-      <h2> Your one stop shop for all things running </h2>
-      <a href="workoutsPage.html">Workouts</a> |
-      <a href="recordspage.html">Running Records</a> |
-      <a href="trailsPage.html">Find Trails near me</a> |
-      <a href="productsPage.html">Running Products</a>
+  <body>
+    <h1><a href="homePage.html">The Run Stop Shop</a></h1>
+    <h2> Your one stop shop for all things running </h2>
+    <a href="workoutsPage.html">Workouts</a> |
+    <a href="recordspage.html">Running Records</a> |
+    <a href="trailsPage.html">Find Trails near me</a> |
+    <a href="productsPage.html">Running Products</a>
+
+    <h2>Running Products</h2>
+    <iframe name="productOfTheDay_iframe" src="./product_categories/productOfTheDay.html" frameBorder="0" width="300" height="300"></iframe>
+
+    <div>
+      <div>Search:</div>
+      <div>
+        <input>
+        <button>Submit</button>
+      </div>
+    </div>
+
+    <h3>Product Categories:</h3>
+    <div>
+      <a href="./product_categories/shoes.html" target="products_iframe"><strong>Shoes</strong></a> | 
+      <a href="./product_categories/shorts.html" target="products_iframe"><strong>Shorts</strong></a> | 
+      <a href="./product_categories/shirts.html" target="products_iframe"><strong>T-Shirts/Jackets</strong></a> | 
+      <a href="./product_categories/suppliments.html" target="products_iframe"><strong>Suppliments & Accessories</strong></a>
+    </div>
+
+    <iframe name="products_iframe" src="./product_categories/shoes.html" frameBorder="0" width="600" height="700"></iframe>
   
-      <h2>Running Products</h2>
+    <div>
+      <h3> Comments: </h3>
+      <textarea placeholder="(Your comment here)"></textarea>
+      <p>
+        This is an example comment <br>
+        2020/06/07
+      </p>
+      <p>
+        This is another <br>
+        2020/06/07
+      </p>
+    </div>
 
-      <div>
-        <div>Search:</div>
-        <div>
-          <input>
-          <button>Submit</button>
-        </div>
-      </div>
-
-      <h3>Product Categories:</h3>
-      <table width="100%" height="100%">
-        <tr>
-          <td><a href="./product_categories/shoes.html" target="products_iframe"><strong>Shoes</strong></a></td>
-          <td rowspan="500" width=600>
-            <iframe name="products_iframe" src="./product_categories/shoes.html" frameBorder="0" width="100%" height="100%"></iframe>
-          </td>
-          <td rowspan="500">
-            <iframe name="productOfTheDay_iframe" src="./product_categories/productOfTheDay.html" frameBorder="0" width="100%" height="100%"></iframe>
-          </td>
-        </tr>
-        <tr>
-          <td><a href="./product_categories/shorts.html" target="products_iframe"><strong>Shorts</strong></a></td>
-        </tr>
-        <tr>
-          <td><a href="./product_categories/shirts.html" target="products_iframe"><strong>T-Shirts/Jackets</strong></a></td>
-        </tr>
-        <tr>
-          <td width="15%"><a href="./product_categories/suppliments.html" target="products_iframe"><strong>Suppliments & <br> Accessories</strong></a></td>
-        </tr>
-
-      </table>
+    <footer>
+        Last Modified: 2020, June 20 <br>
+      Author: Nicholas Mateus
+    </footer>
     
-      <div>
-        <h3> Comments: </h3>
-        <textarea placeholder="(Your comment here)"></textarea>
-        <p>
-          This is an example comment <br>
-          2020/06/07
-        </p>
-        <p>
-          This is another <br>
-          2020/06/07
-        </p>
-      </div>
-
-      <footer>
-          Last Modified: 2020, June 1 <br>
-        Author: Nicholas Mateus
-      </footer>
-      
-    </body></html>
+  </body>
+</html>
