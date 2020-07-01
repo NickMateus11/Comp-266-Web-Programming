@@ -137,6 +137,62 @@ footer {
     color: black;
 }
 
+.products_tabs_column {
+    float: left;
+    width: 12%;
+}
+
+.products_column_right {
+    margin: 0% 5% 0% 12% ;
+    float: left;
+    width: 45%;
+    text-align: center;
+}
+
+.products {
+    border: 2px solid black;
+    border-radius: 16px
+}
+
+.products_title {
+    background-color: gray;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0% 25%;
+    width: 100%;
+}
+
+.products_column {
+    background-color: lightgrey;
+    text-align: center;
+    margin: 0% 25%;
+    width: 100%;
+}
+
+.products_tab {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.products_tab:hover {
+    background-color: grey;
+    color: black;
+}
+
+.searchBox_products {
+    padding-bottom: 20px;
+}
+
+.PoD {
+    float:left;
+}
+
+.products_title_main {
+    text-align: center;
+}
+
 table.minimalistBlack {
     border: 3px solid #000000;
     border-left: 1px solid black;
@@ -144,33 +200,34 @@ table.minimalistBlack {
     text-align: left;
     border-collapse: collapse;
     float: left;
-  }
-  table.minimalistBlack td, table.minimalistBlack th {
+}
+
+table.minimalistBlack td, table.minimalistBlack th {
     border: 1px solid #000000;
     padding: 5px 4px;
-  }
-  table.minimalistBlack tbody td {
+}
+table.minimalistBlack tbody td {
     font-size: 15px;
-  }
-  table.minimalistBlack thead {
+}
+table.minimalistBlack thead {
     background: #CFCFCF;
     background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
     background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
     background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
     border-bottom: 3px solid #000000;
-  }
-  table.minimalistBlack thead th {
+}
+table.minimalistBlack thead th {
     font-size: 15px;
     font-weight: bold;
     color: #000000;
     text-align: left;
-  }
-  table.minimalistBlack tfoot {
+}
+table.minimalistBlack tfoot {
     font-size: 14px;
     font-weight: bold;
     color: #000000;
     border-top: 3px solid #000000;
-  }
-  table.minimalistBlack tfoot td {
+}
+table.minimalistBlack tfoot td {
     font-size: 14px;
-  }
+}

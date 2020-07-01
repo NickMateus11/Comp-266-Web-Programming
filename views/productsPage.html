@@ -26,31 +26,42 @@
       </div>
     </header>
 
-    <!-- Product of the Day -->
-    <h2>Running Products</h2>
-    <iframe name="productOfTheDay_iframe" src="./product_categories/productOfTheDay.html" frameBorder="0" width="300" height="300"></iframe>
+    <h2 class="products_title_main">Running Products</h2>
 
-    <!-- Product Search -->
-    <div name="searchBox">
-      <div>Search:</div>
-      <div>
-        <input>
-        <button>Submit</button>
+    <div class="row">
+      <!-- Product Category Tabs -->
+      <div class="products_tabs_column">
+        <h3 class="products_title">Product Categories:</h3>
+        <div class="products_column">
+            <a class="products_tab" href="./product_categories/shoes.html" target="products_iframe">Shoes</a>
+            <a class="products_tab" href="./product_categories/shorts.html" target="products_iframe">Shorts</a>
+            <a class="products_tab" href="./product_categories/shirts.html" target="products_iframe">T-Shirts/Jackets</a>
+            <a class="products_tab" href="./product_categories/suppliments.html" target="products_iframe">Suppliments & Accessories</a>
+          </div>
+        </div>
+
+      <!-- Product iframe -->
+      <div class="products_column_right">
+        <!-- Product Search -->
+        <div class="searchBox_products">
+          <div>Search:</div>
+          <div>
+            <input>
+            <button>Submit</button>
+          </div>
+        </div>
+        <div class="products">  
+          <iframe name="products_iframe" src="./product_categories/shoes.html" frameBorder="0" width="600" height="700"></iframe>
+        </div>
       </div>
+
+      <div class="PoD">
+        <!-- Product of the Day -->
+        <iframe name="productOfTheDay_iframe" src="./product_categories/productOfTheDay.html" frameBorder="0" width="200" height="300"></iframe>
+      </div>
+
     </div>
 
-    <!-- Product Category Tabs -->
-    <h3>Product Categories:</h3>
-    <div name="productCategories">
-      <a href="./product_categories/shoes.html" target="products_iframe"><strong>Shoes</strong></a> | 
-      <a href="./product_categories/shorts.html" target="products_iframe"><strong>Shorts</strong></a> | 
-      <a href="./product_categories/shirts.html" target="products_iframe"><strong>T-Shirts/Jackets</strong></a> | 
-      <a href="./product_categories/suppliments.html" target="products_iframe"><strong>Suppliments & Accessories</strong></a>
-    </div>
-
-    <!-- Product iframe -->
-    <iframe name="products_iframe" src="./product_categories/shoes.html" frameBorder="0" width="600" height="700"></iframe>
-  
     <!-- Comments -->
     <div name="comments">
       <h3> Comments: </h3>
