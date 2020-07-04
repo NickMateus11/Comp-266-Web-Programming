@@ -1,0 +1,55 @@
+.about_workout {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.workout_tabs_column {
+    float: left;
+    width: 12%;
+}
+
+.workout_column_right {
+    margin: 0% 12%;
+    float: left;
+    width: 50%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 16px
+}
+
+.workout_title {
+    background-color: gray;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0% 25%;
+    width: 100%;
+}
+
+.workouts_column {
+    background-color: lightgrey;
+    text-align: center;
+    margin: 0% 25%;
+    width: 100%;
+}
+
+.workout_tab {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.workout_tab:hover {
+    background-color: grey;
+    color: black;
+}
+
+.leftcolumn_workout {
+    float: left;
+    width: 60%;
+}
+
+.rightcolumn_workout {
+    float: left;
+    width: 40%;
+}

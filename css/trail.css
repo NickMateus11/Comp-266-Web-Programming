@@ -1,0 +1,49 @@
+.trail_title {
+    text-align: center;
+}
+
+.top_rated_trail {
+    list-style-type:none;
+    text-align: center;
+    width: 100%;
+    margin-left: 0%;
+}
+
+.top_rated_trail_list {
+    float:left;
+    padding: 0px 15px;
+}
+
+.top_rated_trail_title {
+    margin-left: 10%;
+}
+
+.topRatedTrails {
+    background-color: lightgray;
+}
+
+.trail_table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.trail_table tr {
+    border: 2px solid black
+}
+
+.trail_table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.leftcolumn_trail {
+    float: left;
+    width: 25%;
+    margin-top: 5%; 
+    margin-left: 10%;
+}
+
+.rightcolumn_trail {
+    float: left;
+    width: 65%;
+}
