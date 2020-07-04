@@ -1,56 +1,75 @@
 
 <!-- 
 	Author: Nicholas Mateus
- 	Last Modified: 2020, June 20
+ 	Last Modified: 2020, July 3
 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/cotton/64/000000/trainers.png" />
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../css/workout.css">
     <title>The Run Stop Shop</title>
   </head>
     
   <!-- Site Tabs -->
   <body>
-    <h1><a href="homePage.html">The Run Stop Shop</a></h1>
-    <h2> Your one stop shop for all things running </h2>
-    <a href="workoutsPage.html">Workouts</a> |
-    <a href="recordsPage.html">Running Records</a> |
-    <a href="trailsPage.html">Find Trails near me</a> |
-    <a href="productsPage.html">Running Products</a>
+    <header>
+      <h1><a href="homePage.html">The Run Stop Shop</a></h1>
+      <h2> Your one stop for all things running </h2>
+      <div class="topnav">
+        <a href="workoutsPage.html">Workouts</a>
+        <a href="recordsPage.html">Running Records</a>
+        <a href="trailsPage.html">Find Trails near me</a>
+        <a href="productsPage.html">Running Products</a>
+      </div>
+    </header>
 
     <!-- Workout Page Description -->
-    <h3>
-      Workouts available based on <em>YOUR</em> goals. Choosing a workout is as easy as clicking the tabs below!
-    </h3>
+    <div class="leftcolumn_workout">
+      <h3 class="about_workout">
+        Workouts available based on <em>YOUR</em> goals. <br> Choosing a workout is as easy as clicking the tabs below!
+      </h3>
+    </div>
+
 
     <!-- External Resources -->
-    <h4>External Workout Resources:</h4>
-    <ul>
-      <li><a href="https://www.nomeatathlete.com/running-workouts/">nomeatathlete.com</a></li>
-      <li><a href="https://www.mensjournal.com/health-fitness/best-speed-training-running-workouts/">mensjournal.com</a></li>
-      <li><a href="https://www.roadrunnersports.com/blog/running-workouts/">roadrunnersports.com</a></li>
-      <li><a href="https://www.runnersworld.com/workouts/">runnersworld.com</a></li>
-      <li><a href="https://www.menshealth.com/fitness/a26874160/best-running-workouts/">menshealth.com</a></li>
-      <li><a href="https://www.active.com/running/articles/5-running-workouts-for-beginners">active.com</a></li>
-    </ul>
+    <div class="rightcolumn_workout">
+      <h4>External Workout Resources:</h4>
+      <ul>
+        <li><a href="https://www.nomeatathlete.com/running-workouts/">nomeatathlete.com</a></li>
+        <li><a href="https://www.mensjournal.com/health-fitness/best-speed-training-running-workouts/">mensjournal.com</a></li>
+        <li><a href="https://www.roadrunnersports.com/blog/running-workouts/">roadrunnersports.com</a></li>
+        <li><a href="https://www.runnersworld.com/workouts/">runnersworld.com</a></li>
+        <li><a href="https://www.menshealth.com/fitness/a26874160/best-running-workouts/">menshealth.com</a></li>
+        <li><a href="https://www.active.com/running/articles/5-running-workouts-for-beginners">active.com</a></li>
+      </ul>
+    </div>
 
-    <!-- Workout Categories -->
-    <h3>Workouts:</h3>
-    <a href="./workouts/recovery.html" target="workout_iframe"><strong>Recovery Workout</strong></a> | 
-    <a href="./workouts/speed.html" target="workout_iframe"><strong>Speed Workout</strong></a> | 
-    <a href="./workouts/cardio.html" target="workout_iframe"><strong>Cardio Workout</strong></a> | 
-    <a href="./workouts/interval.html" target="workout_iframe"><strong>Interval Workout</strong></a> | 
-    <a href="./workouts/weight_loss.html" target="workout_iframe"><strong>Weight Loss Workout</strong></a>
+    <div class="row">
+      <!-- Workout Categories -->
+      <div class="workout_tabs_column">
+        <h3 class="workout_title">Workouts:</h3>
+        <div class="workouts_column">
+          <a class="workout_tab" href="./workouts/recovery.html" target="workout_iframe">Recovery Workout</a>
+          <a class="workout_tab" href="./workouts/speed.html" target="workout_iframe">Speed Workout</a>
+          <a class="workout_tab" href="./workouts/cardio.html" target="workout_iframe">Cardio Workout</a>
+          <a class="workout_tab" href="./workouts/interval.html" target="workout_iframe">Interval Workout</a>
+          <a class="workout_tab" href="./workouts/weight_loss.html" target="workout_iframe">Weight Loss Workout</a>
+        </div>
+      </div> 
 
-    <!-- Workout iframe -->
-    <div>
-      <iframe name="workout_iframe" src="./workouts/recovery.html" frameBorder="0" width=700 height=850></iframe>
+      <!-- Workout iframe -->
+      <div class="workout_column_right">
+        <iframe name="workout_iframe" src="./workouts/recovery.html" frameBorder="0" width=700 height=850></iframe>
+      </div>
+      
     </div>
   
     <!-- Comments -->
-    <div>
+    <div name="comments">
       <h3> Comments: </h3>
       <textarea placeholder="(Your comment here)"></textarea>
       <p>
@@ -64,7 +83,7 @@
     </div>
 
     <footer>
-        Last Modified: 2020, June 20 <br>
+        Last Modified: 2020, July 3 <br>
       Author: Nicholas Mateus
     </footer>
     

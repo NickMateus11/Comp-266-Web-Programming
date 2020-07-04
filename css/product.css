@@ -1,0 +1,58 @@
+.products_tabs_column {
+    float: left;
+    width: 12%;
+}
+
+.products_column_right {
+    margin: 0% 5% 0% 12% ;
+    float: left;
+    width: 45%;
+    text-align: center;
+}
+
+.products {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    border-radius: 16px
+}
+
+.products_title {
+    background-color: gray;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0% 25%;
+    width: 100%;
+}
+
+.products_column {
+    background-color: lightgrey;
+    text-align: center;
+    margin: 0% 25%;
+    width: 100%;
+}
+
+.products_tab {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.products_tab:hover {
+    background-color: grey;
+    color: black;
+}
+
+.searchBox_products {
+    padding-bottom: 20px;
+}
+
+.PoD {
+    float:left;
+}
+
+.products_title_main {
+    text-align: center;
+}

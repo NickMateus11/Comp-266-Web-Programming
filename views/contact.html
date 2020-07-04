@@ -1,37 +1,52 @@
 <!-- 
 	Author: Nicholas Mateus
- 	Last Modified: 2020, June 20
+ 	Last Modified: 2020, July 3
 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/cotton/64/000000/trainers.png" />
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
     <title>The Run Stop Shop</title>
   </head>
 
-  <body>
-    <h1>Contact</h1>
-    <p>Type your name and message to have it sent to the website Admin</p>
-    <a href="homePage.html">HOME</a>
-    <br>
+  <header>
+    <h1><a href="homePage.html">The Run Stop Shop</a></h1>
+    <h2> Your one stop for all things running </h2>
+    <div class="topnav">
+      <a href="workoutsPage.html">Workouts</a>
+      <a href="recordsPage.html">Running Records</a>
+      <a href="trailsPage.html">Find Trails near me</a>
+      <a href="productsPage.html">Running Products</a>
+    </div>
+  </header>
 
-    <!-- Contact Form -->
-    <h4>Contact Form:</h4>
-    <div id="mailForm">
-    <form action="mailto:nmateus1@athabasca.edu">
-        <label for="nameBox">Name:</label>
-        <input type="text" id="nameBox" name="nameBox">
-        <label for="messageBox">Message:</label>
-        <textarea id="messageBox" name="messageBox"></textarea>
-        
-        <input type="submit" value="Submit">
-    </form>
+  <body>
+    <div class="contact">
+      <h1>Contact</h1>
+      <p>Type your name and message to have it sent to the website Admin</p>
+      <br>
+
+      <!-- Contact Form -->
+      <h4>Contact Form:</h4>
+      <div id="mailForm">
+      <form action="mailto:nmateus1@athabasca.edu">
+          <label for="nameBox">Name:</label>
+          <input type="text" id="nameBox" name="nameBox">
+          <br><br><br>
+          <label for="messageBox">Message:</label>
+          <textarea id="messageBox" name="messageBox"></textarea>
+          <br><br><br>
+          <input type="submit" value="Submit">
+      </form>
+      </div>
     </div>
     <br>
     <br>
     <footer>
-        Last Modified: 2020, June 20 <br>
+        Last Modified: 2020, July 3 <br>
         Author: Nicholas Mateus
     </footer>
   </body>
