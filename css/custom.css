@@ -13,7 +13,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 32px;
+    top: 15px;
     background-color: #f1f1f1;
     width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -25,6 +25,18 @@
     padding: 16px 16px;
     text-decoration: none;
     display: block;
+}
+
+.workout_drop {
+    transform: translate(-8%, 0%);
+}
+
+.product_drop {
+    transform: translate(8%, 0%);
+}
+
+.topnav a {
+    text-decoration: none;
 }
 
 /* Change color of dropdown links on hover */

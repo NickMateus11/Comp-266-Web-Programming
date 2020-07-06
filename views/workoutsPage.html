@@ -23,12 +23,14 @@
   
         <div class="dropdown">
           <a class="dropbtn" id="workout_tab" href="workoutsPage.html">Workouts</a>
-          <div class="dropdown-content">
-            <a class="dropDownLink" href="workoutsPage.html?workout=recovery">Recovery</a>
-            <a class="dropDownLink" href="workoutsPage.html?workout=speed">Speed</a>
-            <a class="dropDownLink" href="workoutsPage.html?workout=cardio">Cardio</a>
-            <a class="dropDownLink" href="workoutsPage.html?workout=interval">Interval</a>
-            <a class="dropDownLink" href="workoutsPage.html?workout=weightloss">Weight Loss</a>
+          <div class="workout_drop">
+            <div class="dropdown-content">
+              <a class="dropDownLink" href="workoutsPage.html?workout=recovery">Recovery</a>
+              <a class="dropDownLink" href="workoutsPage.html?workout=speed">Speed</a>
+              <a class="dropDownLink" href="workoutsPage.html?workout=cardio">Cardio</a>
+              <a class="dropDownLink" href="workoutsPage.html?workout=interval">Interval</a>
+              <a class="dropDownLink" href="workoutsPage.html?workout=weightloss">Weight Loss</a>
+            </div>
           </div>
         </div>
   
@@ -37,11 +39,13 @@
         
         <div class="dropdown">
           <a class="dropbtn" id="product_tab" href="productsPage.html">Running Products</a>
-          <div class="dropdown-content">
-            <a class="dropDownLink" href="productsPage.html?category=shoes">Shoes</a>
-            <a class="dropDownLink" href="productsPage.html?category=shorts">Shorts</a>
-            <a class="dropDownLink" href="productsPage.html?category=shirts">T-Shirts & <br> Jackets</a>
-            <a class="dropDownLink" href="productsPage.html?category=accessories">Suppliments & <br> Accessories</a>
+          <div class="product_drop">
+            <div class="dropdown-content">
+              <a class="dropDownLink" href="productsPage.html?category=shoes">Shoes</a>
+              <a class="dropDownLink" href="productsPage.html?category=shorts">Shorts</a>
+              <a class="dropDownLink" href="productsPage.html?category=shirts">T-Shirts & <br> Jackets</a>
+              <a class="dropDownLink" href="productsPage.html?category=accessories">Suppliments & <br> Accessories</a>
+            </div>
           </div>
         </div>
       </div>
@@ -73,11 +77,11 @@
       <div class="workout_tabs_column">
         <h3 class="workout_title">Workouts:</h3>
         <div class="workouts_column">
-          <a class="workout_tab" href="./workouts/recovery.html" target="workout_iframe">Recovery Workout</a>
-          <a class="workout_tab" href="./workouts/speed.html" target="workout_iframe">Speed Workout</a>
-          <a class="workout_tab" href="./workouts/cardio.html" target="workout_iframe">Cardio Workout</a>
-          <a class="workout_tab" href="./workouts/interval.html" target="workout_iframe">Interval Workout</a>
-          <a class="workout_tab" href="./workouts/weight_loss.html" target="workout_iframe">Weight Loss Workout</a>
+          <a id="recovery" class="workout_tab" href="workoutsPage.html?workout=recovery">Recovery Workout</a>
+          <a id="speed" class="workout_tab" href="workoutsPage.html?workout=speed">Speed Workout</a>
+          <a id="cardio" class="workout_tab" href="workoutsPage.html?workout=cardio">Cardio Workout</a>
+          <a id="interval" class="workout_tab" href="workoutsPage.html?workout=interval">Interval Workout</a>
+          <a id="weightloss" class="workout_tab" href="workoutsPage.html?workout=weightloss">Weight Loss Workout</a>
         </div>
       </div> 
       
@@ -108,5 +112,6 @@
     </footer>
 
     <script type="text/javascript" src="../src/workout_query_string.js"></script>
+    <script type="text/javascript" src="../src/workout_tab_highlight.js"></script>
     
   </body></html>

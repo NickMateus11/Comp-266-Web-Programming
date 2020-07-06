@@ -3,7 +3,7 @@
 Comp 266 Course Website Project Repo
 
 
-TODO: product of the day
+TODO: workout/product category should change url params
 
 
 For later:
