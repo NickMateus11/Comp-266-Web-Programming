@@ -74,15 +74,25 @@
             <button>Submit</button>
           </div>
         </div>
+
+        <div class="currency">
+          <div>Currency:</div>
+          <div>
+            CAD: <input name="currency_radio" type="radio" value="CAD">
+            USD: <input name="currency_radio" type="radio" value='USD'>
+            N/A: <input name="currency_radio" checked type="radio" value='None'>
+          </div>
+        </div>
+
         <!-- Product iframe -->
         <div class="products">  
-          <iframe name="product_iframe" src="./product_categories/shoes.html" frameBorder="0" width="500" height="750"></iframe>
+          <iframe name="product_iframe" src="" frameBorder="0" width="500" height="750"></iframe>
         </div>
       </div>
 
       <div class="PoD">
         <!-- Product of the Day -->
-        <iframe name="productOfTheDay_iframe" src="./product_categories/productOfTheDay.html" frameBorder="0" width="200" height="300"></iframe>
+        <!-- Filled By Javascript code -->
       </div>
 
     </div>
@@ -106,9 +116,10 @@
       Author: Nicholas Mateus
     </footer>
     
-    <script type="text/javascript" src="../src/product_iframe_from_query_string.js"></script>
-    <script type="text/javascript" src="../src/product_tab_highlight.js"></script>
-    <script type="text/javascript" src="../src/tab_highlighting.js"></script>
+    <script type="module" src="../scripts/product_tab_highlight.js"></script>
+    <script type="text/javascript" src="../scripts/topNav_highlight.js"></script>
+    <script type="module" src="../scripts/PoD.js"></script>
+    <script type="module" src="../scripts/currency_converter.js"></script>
 
   </body>
 </html>
