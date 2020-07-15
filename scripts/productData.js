@@ -19,7 +19,7 @@ export const productList = [
        "alt":"shirts"
     },
     {
-       "name":"Momentum UPF 50+ Anorak",
+       "name":"Momentum UPF 50 Anorak",
        "price":"CAD $89.00",
        "img":"https://eddiebauer.scene7.com/is/image/EddieBauer/D0010256_707C1?$748V1$",
        "href":"https://www.eddiebauer.ca/p/10112340/mens-momentum-upf-50-anorak?sp=1&sizeType=Regular&color=Dk%20Smoke&ch=pla&cm_mmc=GooglePLA-_-non_brand_PLA_All_Products-_-All_Products-_-0010256707000050&cvosrc=cse.google.0010256707000050&cvo_campaign=non_brand_PLA_All_Products&gclid=Cj0KCQjww_f2BRC-ARIsAP3zarH7a3PiQ9PtB0eG_VNZsS_iwqPyydmHf5qs235B7DI5DO3TwgMnTmgaAoWpEALw_wcB",

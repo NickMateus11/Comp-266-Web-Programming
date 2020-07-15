@@ -1,8 +1,8 @@
 
 import { productList } from './productData.js'
 
-const currentDay = Math.floor(new Date() / (1000 * 60 * 60 * 24));
-const PoD = productList[currentDay % productList.length];
+const currentDay = Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24));
+export const PoD = productList[currentDay % productList.length];
 
 const PoD_title = document.createElement('h3');
 PoD_title.innerHTML = "Product of the Day:";

@@ -54,8 +54,16 @@
 
 .PoD {
     float:left;
+    text-align: center;
 }
 
 .products_title_main {
     text-align: center;
+}
+
+.product_table_page {
+    text-align: center;
+    border-spacing: 15px 0px;
+    margin-left:auto;
+    margin-right:auto;
 }
