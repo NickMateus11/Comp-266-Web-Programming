@@ -40,19 +40,16 @@ export function setCurrency(currency) {
     const product_iframe = document.getElementsByName("product_iframe")[0].contentWindow.document;
     const iframe_product_table = product_iframe.getElementsByTagName('table')[0]
     productList.forEach(product => {
-        if (product.alt == getParameterByName("category")){
-            let newPrice;
-            if (product.price.includes(currency)) 
-                newPrice = product.price;
-            else 
-                newPrice = currency + ' $' + (Number(product.price.split('$')[1]) * ((currency === 'CAD')*1.3 + (currency === 'USD')*0.77)).toFixed(2);
+        let newPrice;
+        if (product.price.includes(currency)) 
+            newPrice = product.price;
+        else 
+            newPrice = currency + ' $' + (Number(product.price.split('$')[1]) * ((currency === 'CAD')*1.3 + (currency === 'USD')*0.77)).toFixed(2);
 
-            iframe_product_table.innerHTML = iframe_product_table.innerHTML.replace(
-                new RegExp(`${product.name}[ (<br>)]+ ${oldCurrency} [ \\$0-9\\.]+`), 
-                `${product.name} <br> ${newPrice}`
-            );
-
-        }
+        iframe_product_table.innerHTML = iframe_product_table.innerHTML.replace(
+            new RegExp(`${product.name}[ (<br>)]+ ${oldCurrency} [ \\$0-9\\.]+`), 
+            `${product.name} <br> ${newPrice}`
+        );
     });    
 }
 
