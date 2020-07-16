@@ -11,12 +11,12 @@ function currencyChange() {
     if (lastValue !== currentValue) {
         // console.log("Changed");
         setCurrencyCookie(currentValue);
-        setCurrencyTo(currentValue);
+        setCurrency(currentValue);
         lastValue = currentValue;
     }
 }
 
-export function setCurrencyTo(currency) {
+export function setCurrency(currency) {
     if (!currency) {
         currency = document.querySelector('input[name="currency_radio"]:checked').value;
     }
@@ -87,7 +87,7 @@ document.getElementsByName('currency_radio').forEach( radio => {
 });
 
 let lastValue = document.querySelector('input[name="currency_radio"]:checked').value;
-document.getElementsByName("product_iframe")[0].onload = function() { setCurrencyTo(lastValue); };
+document.getElementsByName("product_iframe")[0].onload = function() { setCurrency(lastValue); };
 
 const currencyRadios = document.getElementsByName('currency_radio');
 currencyRadios.forEach(radio => {

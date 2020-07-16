@@ -1,6 +1,6 @@
 
 import { productList } from './productData.js'
-import { setCurrencyTo } from './currency_converter.js'
+import { setCurrency } from './currency_converter.js'
 
 function search() {
     const search_element = document.getElementById('product_search_input');
@@ -45,7 +45,7 @@ function search() {
     }
     iframe_product_table.innerHTML = table_innerHTML;
 
-    setCurrencyTo(); // default: set currency to whatever the radio button is
+    setCurrency(); // default: set currency to whatever the radio button is
 }
 
 document.getElementById("product_search_input").onkeydown = ()=>{if(event.key==='Enter') search()};
