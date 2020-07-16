@@ -16,7 +16,11 @@ function currencyChange() {
     }
 }
 
-function setCurrencyTo(currency) {
+export function setCurrencyTo(currency) {
+    if (!currency) {
+        currency = document.querySelector('input[name="currency_radio"]:checked').value;
+    }
+
     const oldCurrency = currency==='CAD'? 'USD': 'CAD';
 
     // Product of the Day

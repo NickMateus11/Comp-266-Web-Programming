@@ -1,6 +1,7 @@
 .products_tabs_column {
     float: left;
     width: 12%;
+    margin-top: 5%;
 }
 
 .products_column_right {
@@ -66,4 +67,8 @@
     border-spacing: 15px 0px;
     margin-left:auto;
     margin-right:auto;
+}
+
+#clear_search {
+    margin-top: 5px;
 }

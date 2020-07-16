@@ -70,8 +70,11 @@
         <div class="searchBox_products">
           <div>Search:</div>
           <div>
-            <input>
-            <button>Submit</button>
+          <input id="product_search_input">
+            <button id="search_button">Submit</button>
+            <div>
+              <button id="clear_search" style="display: none;" onclick="window.location.reload();">CLEAR SEARCH</button>
+            </div>
           </div>
         </div>
 
@@ -119,6 +122,7 @@
     <script type="text/javascript" src="../scripts/topNav_highlight.js"></script>
     <script type="module" src="../scripts/PoD.js"></script>
     <script type="module" src="../scripts/currency_converter.js"></script>
+    <script type="module" src="../scripts/product_search.js"></script>
 
   </body>
 </html>
