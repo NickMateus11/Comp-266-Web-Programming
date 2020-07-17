@@ -13,8 +13,8 @@
     float: left;
     width: 50%;
     text-align: center;
-    border: 2px solid black;
-    border-radius: 16px
+    /* border: 2px solid black;
+    border-radius: 16px */
 }
 
 .workout_title {
