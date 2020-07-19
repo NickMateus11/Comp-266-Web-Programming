@@ -5,8 +5,11 @@ import { setCurrency } from './currency_converter.js'
 function search() {
     const search_element = document.getElementById('product_search_input');
     const search_words = search_element.value.split(' ');
-    const product_iframe = document.getElementsByName("product_iframe")[0].contentWindow.document;
-    const iframe_product_table = product_iframe.getElementsByTagName('table')[0]
+    const product_iframe = document.getElementsByName("product_iframe")[0];
+    const iframe_product_table = product_iframe.contentWindow.document.getElementsByTagName('table')[0]
+
+    // hide autocomplete
+    $('.ui-autocomplete').hide()
 
     //return if search empty
     if (!search_words[0]) return;
@@ -14,20 +17,37 @@ function search() {
     //show 'clear search' button
     document.getElementById('clear_search').style = 'display:inline';
 
-    let matches = [];
+
+    // ***** TODO: have priority system, ie: products that are closer to the WHOLE search are prioritized
+    let matches = new Set();
     search_words.forEach( word => {
         productList.forEach( product => {
             if (product.name.toLowerCase().includes(word.toLowerCase()) || 
                 product.alt.includes(word.toLowerCase()) || 
                 word.toLowerCase().includes(product.alt)) 
             {
-                matches.push(product);
+                matches.add(product);
             }
         });
     });
 
+    // convert matches to array and sort by closeness to search
+    matches = [...matches];
+    matches.sort( (a, b) => {
+        const matches_a = a.name.toLowerCase().split(' ').filter(word_name => 
+            search_words.map(word_search => word_search.toLowerCase().includes(word_name.toLowerCase()) 
+            || word_name.toLowerCase().includes(word_search.toLowerCase()))).length;
+        const matches_b = b.name.toLowerCase().split(' ').filter(word_name => 
+            search_words.map(word_search => word_search.toLowerCase().includes(word_name.toLowerCase()) 
+            || word_name.toLowerCase().includes(word_search.toLowerCase()))).length;
+        return matches_b - matches_a ;
+    });
+
     //wipe iframe product table content
     iframe_product_table.innerHTML = '';
+
+    // Set iframe title
+    product_iframe.contentWindow.document.querySelector('.products_title_main h2').innerHTML = "Search Results:";
 
     let table_innerHTML = ''
     for (let i=0; i<matches.length; i++) {
@@ -45,8 +65,17 @@ function search() {
     }
     iframe_product_table.innerHTML = table_innerHTML;
 
+    // ********** experiemental code **********
+    product_iframe.style.height = product_iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
+
     setCurrency(); // default: set currency to whatever the radio button is
 }
 
 document.getElementById("product_search_input").onkeydown = ()=>{if(event.key==='Enter') search()};
 document.getElementById("search_button").onclick = search;
+
+// *** AUTOCOMPLETE ***
+const  availableTags = productList.map(({ name }) => name);
+$( "#product_search_input" ).autocomplete({
+    source: availableTags
+});

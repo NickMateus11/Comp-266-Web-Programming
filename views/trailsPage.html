@@ -22,26 +22,26 @@
     <h2> Your one stop for all things running </h2>
     <div class="topnav">
 
-      <div class="dropdown">
+      <div class="dropdown" id="workout_tab_drop">
         <a class="dropbtn" id="workout_tab" href="workoutsPage.html">Workouts</a>
         <div class="workout_drop">
-          <div class="dropdown-content">
-            <a class="dropDownLink" href="workoutsPage.html?workout=recovery">Recovery</a>
-            <a class="dropDownLink" href="workoutsPage.html?workout=speed">Speed</a>
-            <a class="dropDownLink" href="workoutsPage.html?workout=cardio">Cardio</a>
-            <a class="dropDownLink" href="workoutsPage.html?workout=interval">Interval</a>
-            <a class="dropDownLink" href="workoutsPage.html?workout=weightloss">Weight Loss</a>
-          </div>
+            <div class="dropdown-content" id="workout_dropdown">
+              <a class="dropDownLink" href="workoutsPage.html?workout=recovery">Recovery</a>
+              <a class="dropDownLink" href="workoutsPage.html?workout=speed">Speed</a>
+              <a class="dropDownLink" href="workoutsPage.html?workout=cardio">Cardio</a>
+              <a class="dropDownLink" href="workoutsPage.html?workout=interval">Interval</a>
+              <a class="dropDownLink" href="workoutsPage.html?workout=weightloss">Weight Loss</a>
+            </div>       
         </div>
       </div>
-
+  
       <a id="records_tab" href="recordsPage.html">Running Records</a>
       <a id="trails_tab" href="trailsPage.html">Find Trails near me</a>
-      
-      <div class="dropdown">
+        
+      <div class="dropdown" id="product_tab_drop">
         <a class="dropbtn" id="product_tab" href="productsPage.html">Running Products</a>
         <div class="product_drop">
-          <div class="dropdown-content">
+          <div class="dropdown-content" id="product_dropdown">
             <a class="dropDownLink" href="productsPage.html?category=shoes">Shoes</a>
             <a class="dropDownLink" href="productsPage.html?category=shorts">Shorts</a>
             <a class="dropDownLink" href="productsPage.html?category=shirts">T-Shirts & <br> Jackets</a>
@@ -49,6 +49,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </header>
 
@@ -142,7 +143,9 @@
     Author: Nicholas Mateus
   </footer>
 
-  <script type="text/javascript" src="../scripts/topNav_highlight.js"></script>
+  <script type="module" src="../scripts/jquery.js"></script>
+
+  <script type="module" src="../scripts/topNav_highlight.js"></script>
 
 </body>
 

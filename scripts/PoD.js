@@ -1,7 +1,10 @@
 
 import { productList } from './productData.js'
 
-const currentDay = Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24));
+const UTC_time = new Date()
+
+// ((UTC_time in ms -> minutes) - timezoneOffset in minutes) -> days in current timezone
+const currentDay = Math.floor((UTC_time.getTime() / (1000 * 60) - UTC_time.getTimezoneOffset()) / (60 * 24));
 export const PoD = productList[currentDay % productList.length];
 
 const PoD_title = document.createElement('h3');

@@ -1,6 +1,5 @@
 
 import { productList } from './productData.js'
-import { getParameterByName } from './query_strings.js'
 import { PoD } from './PoD.js'
 
 
@@ -84,7 +83,8 @@ document.getElementsByName('currency_radio').forEach( radio => {
 });
 
 let lastValue = document.querySelector('input[name="currency_radio"]:checked').value;
-document.getElementsByName("product_iframe")[0].onload = function() { setCurrency(lastValue); };
+$( window ).on( "load", () => { setCurrency(lastValue); });
+// document.getElementsByName("product_iframe")[0].onload = function() { setCurrency(lastValue); };
 
 const currencyRadios = document.getElementsByName('currency_radio');
 currencyRadios.forEach(radio => {
