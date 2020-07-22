@@ -53,7 +53,7 @@ export function setCurrency(currency) {
 }
 
 function readCurrencyCookie() {
-    // read cookies and update radio button with whatever the last state was
+    // read cookies for last radio button state
     const cname = 'currency';
 
     // code from: https://www.w3schools.com/js/js_cookies.asp

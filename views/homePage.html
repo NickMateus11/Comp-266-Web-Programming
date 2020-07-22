@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="https://img.icons8.com/cotton/64/000000/trainers.png" />
   <link rel="stylesheet" type="text/css" href="../css/custom.css">
+  <link rel="stylesheet" type="text/css" href="../css/QoD.css">
   <title>The Run Stop Shop</title>
 </head>
 
@@ -108,7 +109,19 @@
         <h3>
           Quote of the Day:
         </h3>
-        <span class="QoD_text">If it doesn't challenge you, <br> it won't change you.</span>
+        
+        <script type="text/javascript" src="../scripts/QoD.js"></script>
+        <div class="tso_default_style">
+          <script>TheySaidSo.render({ qod_category : 'life'});</script>
+          <!-- <script>TheySaidSo.render({ qod_category : 'inspire'});</script> -->
+        </div>
+        <span style="z-index:50;font-size:0.9em; font-weight: bold;">
+          <img src="https://theysaidso.com/branding/theysaidso.png" height="20" width="20" alt="theysaidso.com"/>
+          <a href="https://theysaidso.com" title="Powered by quotes from theysaidso.com" style="color: #ccc; margin-left: 4px; vertical-align: middle;">
+            They Said So®
+          </a>
+        </span>
+
       </div>
       
       <!-- Video of the Day -->
@@ -116,7 +129,9 @@
         <h3>
           Video of the Day:
         </h3>
-        <iframe width="750" height="450" src="https://www.youtube.com/embed/-w5LfaWl5TU" allowfullscreen frameborder="0"></iframe>
+        <div id="VoD_frame">
+          <!-- VoD.js will fill this -->
+        </div>
       </div>
 
     </div>
@@ -131,6 +146,7 @@
   <script type="module" src="../scripts/jquery.js"></script>
 
   <script type="module" src="../scripts/topNav_highlight.js"></script>
+  <script type="module" src="../scripts/VoD.js"></script>
 
 </body>
 </html>
