@@ -152,6 +152,7 @@ blockquote.theysaidso_quote span.tsofooter a
     width : auto;
     word-spacing : normal;
     z-index : auto;
+    cursor: pointer;
 }
 
 /* default style */
@@ -159,7 +160,7 @@ blockquote.theysaidso_quote span.tsofooter a
 blockquote.theysaidso_quote
 {
   margin: 0 auto;
-  padding: 25px;
+  /* padding: 25px; */
   border: none;
 }
 
@@ -170,7 +171,8 @@ blockquote.theysaidso_quote  span.tsofooter
 
 blockquote.theysaidso_quote cite.author:before
 {
-  content: " \2014 \2009 ";
+  content: "\A \2014 \2009 ";
+  white-space: pre-wrap;
 }
 
 
