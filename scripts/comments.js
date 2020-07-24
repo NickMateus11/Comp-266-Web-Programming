@@ -2,10 +2,12 @@
 import { Filter } from './bad-words.js';
 
 
-function submitComment() {
+function submitComment(event) {
+    event.preventDefault();
+
     const comment = document.getElementById('comment_input').value;
     console.log(comment)
-    if (comment == '' || !validateComment(comment)) return false;
+    if (!validateComment(comment)) return false;
 
     $.post("../../mysql.php", {
         "page": new RegExp('([a-zA-z]+)\.html.*').exec(window.location.href)[1], 
@@ -52,6 +54,7 @@ function populatePageWithComments(comments) {
 
 
 $(document).ready(function() {
-    document.getElementById("comment_submit").onclick = submitComment;
+    const form = document.querySelector('form');
+    form.onsubmit = submitComment;
     fetchComments(populatePageWithComments); // callback function must take an array as param
 });
