@@ -1,7 +1,7 @@
 
 <!-- 
 	Author: Nicholas Mateus
- 	Last Modified: 2020, July 11
+ 	Last Modified: 2020, July 24
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -104,7 +104,10 @@
     <!-- Comments -->
     <div name="comments">
       <h3> Comments: </h3>
-      <textarea placeholder="(Your comment here)"></textarea>
+      <form name="comment_form">
+        <textarea name="comment" placeholder="(Your comment here)" required></textarea>
+        <input type="submit" value="Submit">
+      </form>
       <p>
         This is an example comment <br>
         2020/06/07
@@ -116,7 +119,7 @@
     </div>
 
     <footer>
-        Last Modified: 2020, July 11 <br>
+        Last Modified: 2020, July 24 <br>
       Author: Nicholas Mateus
     </footer>
     
@@ -128,6 +131,8 @@
     <script type="module" src="../scripts/PoD.js"></script>
     <script type="module" src="../scripts/currency_converter.js"></script>
     <script type="module" src="../scripts/product_search.js"></script>    
+    <script type="module" src="../scripts/comments.js"></script>
+
 
   </body>
 </html>

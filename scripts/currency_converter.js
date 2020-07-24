@@ -77,16 +77,18 @@ function setCurrencyCookie(currency) {
     document.cookie = `currency=${currency}`;
 }
 
-const currency = readCurrencyCookie();
-document.getElementsByName('currency_radio').forEach( radio => {
-    if (radio.value === currency) radio.checked = true;
-});
-
-let lastValue = document.querySelector('input[name="currency_radio"]:checked').value;
-$( window ).on( "load", () => { setCurrency(lastValue); });
-// document.getElementsByName("product_iframe")[0].onload = function() { setCurrency(lastValue); };
-
-const currencyRadios = document.getElementsByName('currency_radio');
-currencyRadios.forEach(radio => {
-    radio.onchange = currencyChange;
+$( document ).ready(function() {
+    const currency = readCurrencyCookie();
+    document.getElementsByName('currency_radio').forEach( radio => {
+        if (radio.value === currency) radio.checked = true;
+    });
+    
+    let lastValue = document.querySelector('input[name="currency_radio"]:checked').value;
+    $( window ).on( "load", () => { setCurrency(lastValue); });
+    // document.getElementsByName("product_iframe")[0].onload = function() { setCurrency(lastValue); };
+    
+    const currencyRadios = document.getElementsByName('currency_radio');
+    currencyRadios.forEach(radio => {
+        radio.onchange = currencyChange;
+    });
 });

@@ -71,11 +71,14 @@ function search() {
     setCurrency(); // default: set currency to whatever the radio button is
 }
 
-document.getElementById("product_search_input").onkeydown = ()=>{if(event.key==='Enter') search()};
-document.getElementById("search_button").onclick = search;
 
-// *** AUTOCOMPLETE ***
-const  availableTags = productList.map(({ name }) => name);
-$( "#product_search_input" ).autocomplete({
-    source: availableTags
+$( document ).ready(function() {
+    document.getElementById("product_search_input").onkeydown = ()=>{if(event.key==='Enter') search()};
+    document.getElementById("search_button").onclick = search;
+
+    // *** AUTOCOMPLETE ***
+    const  availableTags = productList.map(({ name }) => name);
+    $( "#product_search_input" ).autocomplete({
+        source: availableTags
+    });
 });
