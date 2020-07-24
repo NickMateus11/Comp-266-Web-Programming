@@ -27,15 +27,15 @@ if (!empty($_GET)) {
 	exit(json_encode($response));
 
 } elseif (!empty($_POST)) {
-	$page = $_POST["page"];
+	$page = mysql_real_escape_string($_POST["page"]);
 	$comment = mysql_real_escape_string($_POST["comment"]);
-	$date = $_POST["date"];
-	$query_result = mysql_query("INSERT INTO comments(page,comment,date) VALUES($page,$comment,$date)");
+	$date = mysql_real_escape_string($_POST["date"]);
+	$query_result = mysql_query("INSERT INTO comments(page,comment,date) VALUES(\"$page\",\"$comment\",\"$date\")");
 
 	mysql_close($dbh);
 
 	$response = array();
-	if (mysql_affected_rows()) {
+	if (mysql_affected_rows() != -1) {
 		$response['status'] = 200;
 	} else {
 		$response['status'] = 500;

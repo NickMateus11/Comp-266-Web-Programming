@@ -94,21 +94,13 @@
     </div>
   
     <!-- Comments -->
-    <div name="comments">
-      <h3> Comments: </h3>
-      <form name="comment_form">
-        <textarea name="comment" placeholder="(Your comment here)" required></textarea>
-        <input type="submit" value="Submit">
-      </form>
-      <p>
-        This is an example comment <br>
-        2020/06/07
-      </p>
-      <p>
-        This is another <br>
-        2020/06/07
-      </p>
-    </div>
+      <div id="comments">
+        <h3> Comments: </h3>
+        <textarea id="comment_input" placeholder="(Your comment here)"></textarea>
+        <button id="comment_submit">Submit</button>
+        <div id="loaded_comments"></div>
+          <!-- Comments will be inserted here -->
+      </div>
 
     <footer>
         Last Modified: 2020, July 24 <br>
