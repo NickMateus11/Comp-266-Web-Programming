@@ -134,9 +134,7 @@ footer {
     border-radius: 16px
 }
 
-
-/* QoD Css */
-
-.tso_default_style {
-    text-decoration: none;
+textarea {
+    width: 400px;
+    height: 100px;
 }

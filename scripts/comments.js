@@ -34,12 +34,15 @@ function fetchComments(callback) {
     $.get("../../mysql.php", { 
         "page": new RegExp('([a-zA-z]+)\.html.*').exec(window.location.href)[1],
     }).done(function (data) {
-        const response = JSON.parse(data);
+        let response;
+        try { response = JSON.parse(data); } 
+        catch { response = {}; }
+        
         if(response['comments']){
             callback(response['comments']);
         }else{
             console.log("Comment Retrieval FAILED");
-            callback({'comment':' *** COMMENTS FAILED TO LOAD ***'});
+            callback([{'comment':' *** COMMENTS FAILED TO LOAD ***', 'date':''}]);
         }    
     });
 }
