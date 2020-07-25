@@ -11,6 +11,8 @@
   <link rel="icon" type="image/png" href="https://img.icons8.com/cotton/64/000000/trainers.png" />
   <link rel="stylesheet" type="text/css" href="../css/custom.css">
   <link rel="stylesheet" type="text/css" href="../css/trail.css">
+  <link rel='stylesheet' type="text/css" href='../css/mapBox.css'  />
+
   <title>The Run Stop Shop</title>
 </head>
 
@@ -87,16 +89,32 @@
   <div class="row">
     <div class="leftcolumn_trail">
       <div>Location Search:</div>
-      <div>
-        <input value="Central Ontario">
-        <button>Submit</button>
-      </div>
+      <form id="trailSearch_form">
+        <input id="trailSearch_input" value="Oakville, Ontario" required></textarea>
+        <input type="submit" value="Submit">
+      </form>
+
+      <!-- Master Map -->
+      <h3 class='trail_overview'>Trail Overview:</h3>
+      <div class="map" id="map_master"></div>
     </div>
 
     <!-- Trails Table -->
     <div class="rightcolumn_trail">
       <h3>Trails</h3>
       <table class="trail_table">
+        <tr>
+          <td>
+            <a href="https://www.trailrunproject.com/trail/7053603/claireville-conservation-area-loop"> <img
+                alt="Claireville" src="https://cdn2.apstatic.com/photos/hike/7051865_smallMed_1555693788.jpg"> </a>
+            <br><a href="https://www.trailrunproject.com/trail/7053603/claireville-conservation-area-loop">Claireville
+              Conservation Area Loop (Etobicoke, Ontario)</a>
+          </td>
+          <td>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184477.1247070588!2d-79.7262791294345!3d43.74264591252948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3c9dc50c4e99%3A0xc2bcf995cb34c79!2sClaireville%20Conservation%20Area!5e0!3m2!1sen!2sca!4v1593645555792!5m2!1sen!2sca" width="400" height="250"></iframe>
+          </td>
+        </tr>
         <tr>
           <td>
             <a href="https://www.trailrunproject.com/trail/7074625/tews-falls-side-trail"> <img alt="Tews Falls"
@@ -110,14 +128,13 @@
         </tr>
         <tr>
           <td>
-            <a href="https://www.trailrunproject.com/trail/7053603/claireville-conservation-area-loop"> <img
-                alt="Claireville" src="https://cdn2.apstatic.com/photos/hike/7051865_smallMed_1555693788.jpg"> </a>
-            <br><a href="https://www.trailrunproject.com/trail/7053603/claireville-conservation-area-loop">Claireville
-              Conservation Area Loop (Etobicoke, Ontario)</a>
+            <a href="https://www.trailrunproject.com/trail/7072313/captain-cootes-trail"> <img alt="Tews Falls"
+                src="https://cdn2.apstatic.com/photos/hike/7056460_smallMed_1555711499.jpg"> </a>
+            <br><a href="https://www.trailrunproject.com/trail/7072313/captain-cootes-trail">Captain Cootes Trail
+              (Hamilton, Ontario)</a>
           </td>
           <td>
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184477.1247070588!2d-79.7262791294345!3d43.74264591252948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3c9dc50c4e99%3A0xc2bcf995cb34c79!2sClaireville%20Conservation%20Area!5e0!3m2!1sen!2sca!4v1593645555792!5m2!1sen!2sca" width="400" height="250"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46478.61876684819!2d-79.81960326779675!3d43.27418433077722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c9cbeb40f6c53%3A0x76dadd0b6eba2bee!2sCaptain%20Cootes%20Trail%2C%20Hamilton%2C%20ON!5e0!3m2!1sen!2sca!4v1595694008612!5m2!1sen!2sca" width="400" height="250"></iframe>
           </td>
         </tr>
       </table>
@@ -127,7 +144,7 @@
   <!-- Comments -->
   <div id="comments">
     <h3> Comments: </h3>
-    <form>
+    <form id="comment_form">
       <textarea id="comment_input" placeholder="(Your comment here)" required></textarea>
       <div><input type="submit" value="Submit"></div>
     </form>
@@ -141,8 +158,11 @@
   </footer>
 
   <script type="module" src="../scripts/jquery.js"></script>
+  <!-- MAPBOX -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
 
   <script type="module" src="../scripts/topNav_highlight.js"></script>
+  <script type="module" src="../scripts/trailsAPI.js"></script>
   <script type="module" src="../scripts/comments.js"></script>
 
 </body>

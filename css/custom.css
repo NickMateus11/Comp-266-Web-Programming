@@ -47,7 +47,8 @@ header {
     position: sticky;
     top: 0;
     padding: 0px 20px 20px;
-    }
+    z-index: 1;
+}
 
 footer {
     padding-top: 50px;
@@ -60,6 +61,7 @@ footer {
     background-color: #333;
     text-align: center;
     padding: 15px;
+
 }
   
 /* Navbar links */

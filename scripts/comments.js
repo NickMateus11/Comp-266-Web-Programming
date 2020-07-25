@@ -6,8 +6,10 @@ function submitComment(event) {
     event.preventDefault();
 
     const comment = document.getElementById('comment_input').value;
-    console.log(comment)
-    if (!validateComment(comment)) return false;
+    if (!validateComment(comment)) {
+        alert("Your comment is inappropriate, you will not be able to submit");
+        return;
+    }
 
     $.post("../../mysql.php", {
         "page": new RegExp('([a-zA-z]+)\.html.*').exec(window.location.href)[1], 
@@ -18,11 +20,16 @@ function submitComment(event) {
         const response = JSON.parse(data);
         if(response['status'] === 200){
             console.log("Comment Submission Successful");
+            // fetchComments(populatePageWithComments);
             location.reload();
         }else{
             console.log("Comment Submission FAILED");
             alert("Comment submission failed");
         }
+    })
+    .fail(function() {
+        console.log("Comment Submission FAILED");
+        alert("Comment submission failed:\nSomething went wrong");
     });
 }
 
@@ -57,7 +64,7 @@ function populatePageWithComments(comments) {
 
 
 $(document).ready(function() {
-    const form = document.querySelector('form');
+    const form = document.querySelector('#comment_form');
     form.onsubmit = submitComment;
     fetchComments(populatePageWithComments); // callback function must take an array as param
 });

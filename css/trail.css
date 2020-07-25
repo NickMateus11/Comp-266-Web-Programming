@@ -47,3 +47,24 @@
     float: left;
     width: 65%;
 }
+
+.table_map {
+    width: 400px; 
+    height: 250px;
+}
+
+.map, .trail_overview {
+    margin-top:50px;
+    margin-left: -25%;
+    width: 400px; 
+    height: 300px;
+}
+
+.map {
+    margin-top: 30px;
+}
+
+.trail_overview {
+    display: none;
+    height: 0px;
+}
