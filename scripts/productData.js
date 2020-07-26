@@ -165,7 +165,7 @@ export const productList = [
    {
      name: 'Supernova Tights',
      price: 'CAD $80',
-     img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/b624769e3fb4498faaa7a8dd01256fd0_9366/Supernova_Tights_Black_CY5799_CY5799_22_model.jpg',
+     img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/f1d57e43e30d49c8a59fa89a001d9822_9366/Supernova_Tights_Black_CY5799_CY5799_01_laydown.jpg',
      href: 'https://www.adidas.ca/en/supernova-tights/CY5799.html?pr=product_rr&slot=1',
      width: 150,
      height: 150,
