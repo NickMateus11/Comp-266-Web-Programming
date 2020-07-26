@@ -6,6 +6,51 @@ export const videoList = [
     },
     {
         title:"",
-        link:"https://www.youtube.com/embed/-w5LfaWl5TU"
+        link:"https://www.youtube.com/embed/fBftJhd7Xis"
     },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/TwcCg_jDx5o"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/vEpfjetdz-0"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/CEqciTfZx1g"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/WOmC192_TxM"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/d24DjwvwZWw"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/i6s_MfFc81Y"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/Wk2h1UtrkCI"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/RunQfm_evdI"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/iMek3xdvulQ"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/t4eeibcUfY4"
+    },
+    {
+        title:"",
+        link:"https://www.youtube.com/embed/SvP-ym4vYrE"
+    },
+    
 ];
