@@ -87,7 +87,7 @@ export function createMap(targetID, centerCoords, markers, forceZoom, onStyleLoa
         });
 
         map.on('styledata', function() {
-            if (onStyleLoad){ console.log(onStyleLoad);onStyleLoad(); }
+            if (onStyleLoad){ onStyleLoad(); }
         });
 
     });
