@@ -26,20 +26,18 @@ switch (currentPage) {
         break;
 }
 
-$(document).ready(function(){
-    $("#workout_tab_drop").hover(
-        function () { 
-            setTimeout( () => {
-                if ($('#workout_tab_drop').is(':hover')) $('#workout_dropdown').slideDown('medium'); 
-            }, 250)},
-        function () { $('#workout_dropdown').slideUp('fast'); }
-    );
+$("#workout_tab_drop").hover(
+    function () { 
+        setTimeout( () => {
+            if ($('#workout_tab_drop').is(':hover')) $('#workout_dropdown').slideDown('medium'); 
+        }, 250)},
+    function () { $('#workout_dropdown').slideUp('fast'); }
+);
 
-    $("#product_tab_drop").hover(
-        function () { 
-            setTimeout( () => {
-                if ($('#product_tab_drop').is(':hover')) $('#product_dropdown').slideDown('medium'); 
-            }, 250)},
-        function () { $('#product_dropdown').slideUp('fast'); }
-    );
-})
+$("#product_tab_drop").hover(
+    function () { 
+        setTimeout( () => {
+            if ($('#product_tab_drop').is(':hover')) $('#product_dropdown').slideDown('medium'); 
+        }, 250)},
+    function () { $('#product_dropdown').slideUp('fast'); }
+);

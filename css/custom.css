@@ -7,6 +7,10 @@
     display: block;
 }
 
+.dropdown {
+    display: none;
+}
+
 .workout_drop {
     transform: translate(-95%, 32px);
     position: absolute;
