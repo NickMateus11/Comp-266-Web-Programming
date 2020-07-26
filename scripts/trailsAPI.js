@@ -4,8 +4,8 @@ import { TRAILS_API_KEY, MAPBOX_API_KEY as GEOCODING_API_KEY } from './api_keys.
 
 const trailsAPI_url = "https://www.trailrunproject.com/data";
 const trailsAPI_endpoint = "/get-trails";
-// const trailsAPI_extraParams = ["maxResults=3&sort=distance"];
-const trailsAPI_extraParams = ["maxResults=3"];
+// const trailsAPI_extraParams = ["maxResults=3","sort=distance"];
+const trailsAPI_extraParams = ["maxResults=50"];
 
 const geoAPI_url = "https://api.mapbox.com/geocoding/v5";
 const geoAPI_endpoint = "/mapbox.places";
@@ -13,9 +13,17 @@ const geoAPI_endpoint = "/mapbox.places";
 
 async function getTrails(coords) {
     const trailResults = await (await fetch(`${trailsAPI_url}${trailsAPI_endpoint}?lat=${coords['lat']}&lon=${coords['lon']}&${trailsAPI_extraParams.join('&')}&key=${TRAILS_API_KEY}`)).json();
-    
-    // TODO use only trails that have pics
-    return trailResults.trails;
+    const allTrails = trailResults.trails;
+    const numTrailsWanted = 3;
+
+    const trails = []
+    for (let i=0; i<allTrails.length && trails.length<numTrailsWanted; i++) {
+        if (allTrails[i].imgSmallMed) { trails.push(allTrails[i]); }
+    }
+    for (let i=0; i<allTrails.length && trails.length<numTrailsWanted; i++) {
+        if (!trails.includes(allTrails[i])) { trails.push(allTrails[i]); }
+    }
+    return trails;
 }
 
 async function getCoords(location) {
@@ -85,8 +93,13 @@ async function trailSearch_onclick(event) {
         );
     });
 
+
+    $( "#dialog" ).dialog({
+        modal: true,
+        draggable: false,
+    });
     //create a master map with markers
-    createMap('map_master', Object.values(coords), trail_markers, 7);
+    createMap('map_master', Object.values(coords), trail_markers, 7, function(){ $( "#dialog" ).dialog( "close" ); });
     $('.trail_overview').show();
 }
 

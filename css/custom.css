@@ -140,3 +140,11 @@ textarea {
     width: 400px;
     height: 100px;
 }
+
+.ui-dialog {
+    position: fixed;
+}
+
+#dialog {
+    display: none;
+}

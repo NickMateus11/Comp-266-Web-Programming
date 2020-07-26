@@ -1,15 +1,15 @@
 import { MAPBOX_API_KEY } from './api_keys.js';
 mapboxgl.accessToken = MAPBOX_API_KEY;
 
-// Resource from: https://docs.mapbox.com/mapbox-gl-js/example/popup-on-hover/
-export function createMap(targetID, centerCoords, markers, zoom) {
+// Retrieved from: https://docs.mapbox.com/mapbox-gl-js/example/popup-on-hover/
+export function createMap(targetID, centerCoords, markers, forceZoom, onStyleLoad) {
 
     var map = new mapboxgl.Map({
         container: targetID,
         style: 'mapbox://styles/mapbox/streets-v11',
         center: centerCoords,
-        zoom: zoom || 11,
-        minZoom: Math.min(8, zoom-1),
+        zoom: forceZoom || 11,
+        minZoom: Math.min(8, forceZoom-1),
         maxZoom: 14,
     });
     
@@ -85,5 +85,10 @@ export function createMap(targetID, centerCoords, markers, zoom) {
             map.getCanvas().style.cursor = '';
             popup.remove();
         });
+
+        map.on('styledata', function() {
+            if (onStyleLoad){ console.log(onStyleLoad);onStyleLoad(); }
+        });
+
     });
 }
