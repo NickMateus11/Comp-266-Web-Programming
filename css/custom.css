@@ -148,3 +148,9 @@ textarea {
 #dialog {
     display: none;
 }
+
+.comment_p{
+    background-color: lightgrey;
+    padding-left: 10px;
+    width: 400px
+}

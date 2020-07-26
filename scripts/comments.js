@@ -58,7 +58,7 @@ function populatePageWithComments(comments) {
     const comment_section = document.getElementById('loaded_comments');
     comment_section.innerHTML = '';
     comments.reverse().forEach(commentData => {
-        comment_section.innerHTML += `<p> ${commentData['comment']} <br> ${commentData['date']} </p>`;
+        comment_section.innerHTML += `<p class="comment_p"><span>${commentData['comment']} <br> ${commentData['date']}</span></p>`;
     });
 }
 
