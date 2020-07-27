@@ -9,16 +9,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://img.icons8.com/cotton/64/000000/trainers.png" />
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
-    <link rel="stylesheet" type="text/css" href="../css/product.css">
+    <link rel="stylesheet" type="text/css" href="../css/workout.css">
     <title>The Run Stop Shop</title>
   </head>
-      
+    
   <!-- Site Tabs -->
   <body>
     <header>
-      <h1><a href="homePage.html">The Run Stop Shop</a></h1>
+      <h1><a href="index.html">The Run Stop Shop</a></h1>
       <h2> Your one stop for all things running </h2>
       <div class="topnav">
   
@@ -53,54 +52,47 @@
       </div>
     </header>
 
-    <h2 class="products_title_main">Running Products</h2>
-
-    <div class="row">
-      <!-- Product Category Tabs -->
-      <div class="products_tabs_column">
-        <h3 class="products_title">Product Categories:</h3>
-        <div class="products_column">
-            <a id="shoes" class="products_tab" href="productsPage.html?category=shoes">Shoes</a>
-            <a id="shorts" class="products_tab" href="productsPage.html?category=shorts">Shorts</a>
-            <a id="shirts" class="products_tab" href="productsPage.html?category=shirts">T-Shirts/Jackets</a>
-            <a id="accessories" class="products_tab" href="productsPage.html?category=accessories">Suppliments & Accessories</a>
-          </div>
-        </div>
-
-      <div class="products_column_right">
-        <!-- Product Search -->
-        <div class="searchBox_products">
-          <div>Search:</div>
-          <div>
-          <input id="product_search_input">
-            <button id="search_button">Submit</button>
-            <div>
-              <button id="clear_search" style="display: none;" onclick="window.location.reload();">CLEAR SEARCH</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="currency">
-          <div>Currency:</div>
-          <div>
-            CAD: <input name="currency_radio" type="radio" value="CAD" checked>
-            USD: <input name="currency_radio" type="radio" value='USD'>
-          </div>
-        </div>
-
-        <!-- Product iframe -->
-        <div class="products">  
-          <iframe class="border_frame" name="product_iframe" src="" frameBorder="0" width="600" height="750"></iframe>
-        </div>
-      </div>
-
-      <div class="PoD">
-        <!-- Product of the Day -->
-        <!-- Filled By Javascript code -->
-      </div>
-
+    <!-- Workout Page Description -->
+    <div class="leftcolumn_workout">
+      <h3 class="about_workout">
+        Workouts available based on <em>YOUR</em> goals. <br> Choosing a workout is as easy as clicking the tabs below!
+      </h3>
     </div>
 
+
+    <!-- External Resources -->
+    <div class="rightcolumn_workout">
+      <h4>External Workout Resources:</h4>
+      <ul>
+        <li><a href="https://www.nomeatathlete.com/running-workouts/">nomeatathlete.com</a></li>
+        <li><a href="https://www.mensjournal.com/health-fitness/best-speed-training-running-workouts/">mensjournal.com</a></li>
+        <li><a href="https://www.roadrunnersports.com/blog/running-workouts/">roadrunnersports.com</a></li>
+        <li><a href="https://www.runnersworld.com/workouts/">runnersworld.com</a></li>
+        <li><a href="https://www.menshealth.com/fitness/a26874160/best-running-workouts/">menshealth.com</a></li>
+        <li><a href="https://www.active.com/running/articles/5-running-workouts-for-beginners">active.com</a></li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <!-- Workout Categories -->
+      <div class="workout_tabs_column">
+        <h3 class="workout_title">Workouts:</h3>
+        <div class="workouts_column">
+          <a id="recovery" class="workout_tab" href="workoutsPage.html?workout=recovery">Recovery Workout</a>
+          <a id="speed" class="workout_tab" href="workoutsPage.html?workout=speed">Speed Workout</a>
+          <a id="cardio" class="workout_tab" href="workoutsPage.html?workout=cardio">Cardio Workout</a>
+          <a id="interval" class="workout_tab" href="workoutsPage.html?workout=interval">Interval Workout</a>
+          <a id="weightloss" class="workout_tab" href="workoutsPage.html?workout=weightloss">Weight Loss Workout</a>
+        </div>
+      </div> 
+      
+      <!-- Workout frames -->
+      <div class="workout_column_right">
+        <div class="border_frame" id="workout_frame"></div>
+      </div>
+      
+    </div>
+  
     <!-- Comments -->
     <div id="comments">
       <h3> Comments: </h3>
@@ -113,20 +105,14 @@
     </div>
 
     <footer>
-      Last Modified: 2020, July 26 <br>
+        Last Modified: 2020, July 26 <br>
       Author: Nicholas Mateus
     </footer>
-    
+
     <script type="module" src="../scripts/jquery.js"></script>
-    <script type="module" src="../scripts/jquery-ui.js"></script>
 
-    <script type="module" src="../scripts/product_tabs.js"></script>
-    <script type="module" src="../scripts/topNav_highlight.js"></script>
-    <script type="module" src="../scripts/PoD.js"></script>
-    <script type="module" src="../scripts/currency_converter.js"></script>
-    <script type="module" src="../scripts/product_search.js"></script>    
+    <script type="module" src="../scripts/workout_tabs.js"></script>
     <script type="module" src="../scripts/comments.js"></script>
+    <script type="module" src="../scripts/topNav_highlight.js"></script>
 
-
-  </body>
-</html>
+  </body></html>

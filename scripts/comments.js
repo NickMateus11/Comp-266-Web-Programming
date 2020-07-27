@@ -11,7 +11,7 @@ function submitComment(event) {
         return;
     }
 
-    $.post("../../mysql.php", {
+    $.post("../mysql.php", {
         "page": new RegExp('([a-zA-z]+)\.html.*').exec(window.location.href)[1], 
         "comment": comment,
         // "date": new Date().toDateString()
@@ -38,7 +38,7 @@ function validateComment(comment) {
 }
 
 function fetchComments(callback) {
-    $.get("../../mysql.php", { 
+    $.get("../mysql.php", { 
         "page": new RegExp('([a-zA-z]+)\.html.*').exec(window.location.href)[1],
     }).done(function (data) {
         let response;
