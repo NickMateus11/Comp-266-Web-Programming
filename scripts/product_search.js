@@ -4,7 +4,7 @@ import { setCurrency } from './currency_converter.js'
 
 function search() {
     const search_element = document.getElementById('product_search_input');
-    const search_words = search_element.value.split(' ');
+    const search_words = search_element.value.toLowerCase().split(' ');
     const product_iframe = document.getElementsByName("product_iframe")[0];
     const iframe_product_table = product_iframe.contentWindow.document.getElementsByTagName('table')[0]
 
@@ -22,10 +22,7 @@ function search() {
     let matches = new Set();
     search_words.forEach( word => {
         productList.forEach( product => {
-            if (product.name.toLowerCase().includes(word.toLowerCase()) || 
-                product.alt.includes(word.toLowerCase()) || 
-                word.toLowerCase().includes(product.alt)) 
-            {
+            if (product.name.toLowerCase().includes(word) || word.includes(product.name.toLowerCase())) {
                 matches.add(product);
             }
         });
@@ -34,12 +31,12 @@ function search() {
     // convert matches to array and sort by closeness to search
     matches = [...matches];
     matches.sort( (a, b) => {
-        const matches_a = a.name.toLowerCase().split(' ').filter(word_name => 
-            search_words.map(word_search => word_search.toLowerCase().includes(word_name.toLowerCase()) 
-            || word_name.toLowerCase().includes(word_search.toLowerCase()))).length;
-        const matches_b = b.name.toLowerCase().split(' ').filter(word_name => 
-            search_words.map(word_search => word_search.toLowerCase().includes(word_name.toLowerCase()) 
-            || word_name.toLowerCase().includes(word_search.toLowerCase()))).length;
+        const matches_a = a.name.toLowerCase().split(' ').filter(product_word => search_words.some(search_word => search_word.includes(product_word))).length
+                            + search_words.filter(search_word => a.name.toLowerCase().split(' ').some(product_word => product_word.includes(search_word))).length;
+
+        const matches_b = b.name.toLowerCase().split(' ').filter(product_word => search_words.some(search_word => search_word.includes(product_word))).length
+                            + search_words.filter(search_word => b.name.toLowerCase().split(' ').some(product_word => product_word.includes(search_word))).length;
+
         return matches_b - matches_a ;
     });
 

@@ -9,7 +9,10 @@ $('#workout_dropdown').hide();
 $('#product_dropdown').hide();
 
 const regex = new RegExp('([a-zA-z]+)\.html.*');
-const currentPage = regex.exec(window.location.href)[1];
+let currentPage = regex.exec(window.location.href);
+if (currentPage) {
+    currentPage = currentPage[1];
+}
 
 switch (currentPage) {
     case "workoutsPage":

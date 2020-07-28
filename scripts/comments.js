@@ -2,6 +2,15 @@
 import { Filter } from './bad-words.js';
 
 
+function getCurrentPage() {
+    const currentPage = new RegExp('([a-zA-z]+)\.html.*').exec(window.location.href);
+    if (currentPage && currentPage[1] != 'index') {
+        return currentPage[1];
+    } else {
+        return 'homePage'
+    }
+}
+
 function submitComment(event) {
     event.preventDefault();
 
@@ -12,7 +21,7 @@ function submitComment(event) {
     }
 
     $.post("../mysql.php", {
-        "page": new RegExp('([a-zA-z]+)\.html.*').exec(window.location.href)[1], 
+        "page": getCurrentPage(), 
         "comment": comment,
         // "date": new Date().toDateString()
         "date": new Date().toLocaleString()
@@ -39,7 +48,7 @@ function validateComment(comment) {
 
 function fetchComments(callback) {
     $.get("../mysql.php", { 
-        "page": new RegExp('([a-zA-z]+)\.html.*').exec(window.location.href)[1],
+        "page": getCurrentPage(),
     }).done(function (data) {
         let response;
         try { response = JSON.parse(data); } 
@@ -66,5 +75,6 @@ function populatePageWithComments(comments) {
 $(document).ready(function() {
     const form = document.querySelector('#comment_form');
     form.onsubmit = submitComment;
+
     fetchComments(populatePageWithComments); // callback function must take an array as param
 });

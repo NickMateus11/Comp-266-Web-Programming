@@ -10,23 +10,23 @@ const category = new URLSearchParams(location.search).get("category");
 switch (category) {
     case "shoes":
         shoesTab.style = 'background-color: grey; color: black';
-        product_iframe.src = "./product_categories/shoes.html";
+        product_iframe.src = "./frames/product_categories/shoes.html";
         break;
     case "shorts":
         shortsTab.style = 'background-color: grey; color: black';
-        product_iframe.src = "./product_categories/shorts.html";
+        product_iframe.src = "./frames/product_categories/shorts.html";
         break;
     case "shirts":
         shirtsTab.style = 'background-color: grey; color: black';
-        product_iframe.src = "./product_categories/shirts.html";
+        product_iframe.src = "./frames/product_categories/shirts.html";
         break;
     case "accessories":
         accessoriesTab.style = 'background-color: grey; color: black';
-        product_iframe.src = "./product_categories/suppliments.html";
+        product_iframe.src = "./frames/product_categories/suppliments.html";
         break;
     default:
         shoesTab.style = 'background-color: grey; color: black';
-        product_iframe.src = "./product_categories/shoes.html";
+        product_iframe.src = "./frames/product_categories/shoes.html";
 }
 
 // ********** experiemental code **********
