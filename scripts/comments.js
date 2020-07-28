@@ -4,7 +4,7 @@ import { Filter } from './bad-words.js';
 
 function getCurrentPage() {
     const currentPage = new RegExp('([a-zA-z]+)\.html.*').exec(window.location.href);
-    if (currentPage && currentPage[1] != 'index') {
+    if (currentPage) {
         return currentPage[1];
     } else {
         return 'homePage'
