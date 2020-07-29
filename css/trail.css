@@ -5,8 +5,8 @@
 .top_rated_trail {
     list-style-type:none;
     text-align: center;
-    width: 100%;
-    margin-left: 0%;
+    display: flex;
+    justify-content: center;
 }
 
 .top_rated_trail_list {
@@ -14,8 +14,13 @@
     padding: 0px 15px;
 }
 
+.top_rated_trail_list:first-of-type {
+    float:left;
+    padding-left: 0px;
+}
+
 .top_rated_trail_title {
-    margin-left: 10%;
+    text-align: center;
 }
 
 .topRatedTrails {
