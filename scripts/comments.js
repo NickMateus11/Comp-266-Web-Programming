@@ -20,7 +20,7 @@ function submitComment(event) {
         return;
     }
 
-    $.post("../mysql.php", {
+    $.post("./mysql.php", {
         "page": getCurrentPage(), 
         "comment": comment,
         // "date": new Date().toDateString()
@@ -47,7 +47,7 @@ function validateComment(comment) {
 }
 
 function fetchComments(callback) {
-    $.get("../mysql.php", { 
+    $.get("./mysql.php", { 
         "page": getCurrentPage(),
     }).done(function (data) {
         let response;
